@@ -1,0 +1,24 @@
+{
+  "name": "WazirX",
+  "version": "1.0",
+  "description": "Changes all there/their/they'res to the wrong version of the word",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "page.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "browser_action": {
+    "default_title": "Crypto",
+    "default_popup": "popup.html"
+  },
+  "icons": {},
+  "manifest_version": 2
+}
