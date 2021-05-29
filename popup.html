@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            color: #697A8B;
+            font-size: 15px;
+        }
+
+        small {
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        body {
+            width: 400px;
+            background-color: #213140;
+        }
+
+        .card {
+            padding: 15px;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .p-10 {
+            padding: 10px;
+        }
+
+        .m-10 {
+            margin: 10px;
+        }
+
+        .text-end {
+            text-align: end;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .btn {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+
+        .btn :hover {
+            color: white;
+            font-weight: bold;
+            background-color: #213140;
+            ;
+        }
+
+        .d-none {
+            display: none !important;
+        }
+
+        .active {
+            font-weight: bold;
+            border-bottom: 4px solid #33a7ff;
+        }
+
+        .d-flex {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-row {
+            flex-direction: row;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .flex-grow-1 {
+            flex-grow: 1;
+        }
+
+        .align-items-center{
+            align-items: center;
+        }
+
+        .text-light {
+            color: white;
+        }
+
+        .bg-red {
+            background-color: rgb(222,50,50);
+        }
+
+        .bg-green {
+            background-color: rgb(19,179,81);
+        }
+
+        .justify-content-end {
+            justify-content: flex-end;
+        }
+
+        #refresh {
+            padding: 15px;
+        }
+
+        #refresh svg{
+            transform: scale(2);
+        }
+
+        #refresh svg:hover {
+            fill: white;
+        }
+
+        #menu  div {
+            cursor: pointer;
+        }
+ 
+    </style>
+    <script src="page.js">
+
+    </script>
+</head>
+
+<body>
+    <div class="d-flex flex-column w-100">
+        <div class="d-flex justify-content-end align-items-center w-100">
+            <div class="flex-grow-1 text-center">
+                <h2 class="fw-bold">Ticker for WazirX</h2>
+            </div>
+            <div class="btn" id="refresh">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                    <path
+                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                </svg>
+            </div>
+        </div>
+        <div id="menu" class="d-flex w-100">
+            <!--div class="btn flex-grow-1 " data-tab="fav">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                </span>
+            </div-->
+            <div class="btn flex-grow-1 active text-center" data-tab="inr">
+                <span>INR</span>
+            </div>
+            <div class="btn flex-grow-1 text-center" data-tab="usdt">
+                <span>USDT</span>
+            </div>
+            <div class="btn flex-grow-1 text-center" data-tab="wrx">
+                <span>WRX</span>
+            </div>
+            <div class="btn flex-grow-1 text-center" data-tab="btc">
+                <span>BTC</span>
+            </div>
+        </div>
+        <div id="tabs" class="w-100">
+            <div id="fav" class="d-flex flex-column w-100 d-none">
+            </div>
+            <div id="inr" class="d-flex flex-column w-100">
+                
+            </div>
+            <div id="usdt" class="d-flex flex-column w-100 d-none">
+
+            </div>
+            <div id="wrx" class="d-flex flex-column w-100 d-none">
+
+            </div>
+            <div id="btc" class="d-flex flex-column w-100 d-none">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
