@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             var old_data = Object.values(result)[0];
             var change = 0;
             if (old_data) {
-                change = (old_data["last"] - data["last"]) / old_data["last"]; 
+                change = (old_data["last"] - data["last"]) / old_data["last"];
                 change = Math.round(change * 100) / 100
             }
 
@@ -66,13 +66,22 @@ document.addEventListener("DOMContentLoaded", () => {
             changeEle.innerText = change + "%";
         });*/
 
+        const unit = {
+          'inr' : '&#8377;',
+          'usdt' : '&#36;',
+          'wrx' : 'WRX',
+          'btc' : 'BTC'
+        }
+
+        let quote_unit = unit[data['quote_unit']];
+
         card.innerHTML = `
          <div class="d-flex flex-column">
             <span class="fw-bold text-light">`+ data["name"] + `</span>
             <span><small></small></span>
          </div>
          <div class="flex-grow-1 text-end p-10 fw-bold text-light">
-         &#8377; `+ data["last"] + `
+          `+quote_unit +` `+ data["last"] + `
          </div>
         <!--div class="btn text-light bg-red m-10">0&percnt;</div-->
         `
