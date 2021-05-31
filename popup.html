@@ -101,6 +101,10 @@
             color: white;
         }
 
+        .bg-primary {
+          background-color: #213140
+        }
+
         .bg-red {
             background-color: rgb(222,50,50);
         }
@@ -111,6 +115,13 @@
 
         .justify-content-end {
             justify-content: flex-end;
+        }
+
+        .sticky-top {
+          position: -webkit-sticky;
+          position: sticky;
+          top: 0;
+          z-index: 1020;
         }
 
         #heading a {
@@ -154,7 +165,7 @@
                 </svg>
             </div>
         </div>
-        <div id="menu" class="d-flex w-100">
+        <div id="menu" class="d-flex w-100 sticky-top bg-primary">
             <!--div class="btn flex-grow-1 " data-tab="fav">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
