@@ -15,10 +15,10 @@
   "permissions": [
     "storage"
   ],
-  "browser_action": {
+  "action": {
     "default_title": "Crypto",
     "default_popup": "popup.html"
   },
   "icons": {},
-  "manifest_version": 2
+  "manifest_version": 3
 }
